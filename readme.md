@@ -1,98 +1,128 @@
-visit - https://akschitra.vercel.app
-for all documentaion and information
+# Read it first
+website is available for this project: https://akschitra.vercel.app/
 
+# AksChitra
 
-# AksChitra (Foundation)
+AksChitra is a terminal rendering framework written in C++.
 
-This is an experiment to treat the terminal like a rendering surface instead of a text output.
+The project explores a simple idea:
 
-Most programs do:
-print → line → scroll → gone
+> Treat the terminal as a rendering surface instead of a text output device.
 
-I’m doing:
-control → position → color → render
-
----
-
-## What this is
-
-AksChitra (this repo) is the **foundation version**.
-
-It draws stuff in terminal using:
-- cursor movement
-- ANSI colors
-- spaces as pixels
-
-So yeah, fake pixels.
+Rather than focusing on lines, streams, and scrolling text, AksChitra focuses on position, state, color, and rendering.
 
 ---
 
-## Why?
+## Project Structure
 
-Because terminal, GitHub, Obsidian — all of them are just:
+AksChitra is divided into two branches of development.
 
-> structured text rendering systems
+### Initiality (Opensource)
 
-I just pushed that idea further:
+Initiality is the minimal core.
 
-> what if text output behaves like a framebuffer?
+Its purpose is to provide a small, stable, and understandable rendering foundation.
 
----
+Focus:
 
-## What it can do
+* Minimal API
+* Cross-platform support
+* Terminal framebuffer concepts
+* Simplicity
+* Learning and experimentation
 
-- Draw pixels
-- Draw lines
-- Draw shapes (square, circle, triangle, etc.)
-- Apply RGB / HEX colors
-- Render at exact positions
-
-Everything is just:
-cursor + " " + background color
+Initiality serves as the base layer for everything built on top of AksChitra.
 
 ---
 
-## What it is NOT
+### Advanced (Private)
 
-- Not a UI framework  
-- Not ncurses alternative  
-- Not optimized  
-- Not the final version  
+Advanced expands on the Initiality core.
 
----
+Its purpose is to explore more complex rendering systems, optimizations, and higher-level functionality.
 
-## Important
+Focus:
 
-This repo is **only the foundation**.
+* Rendering optimizations
+* Layer systems
+* Advanced rendering techniques
+* Experimental features
+* Future extensions
 
-The current version (not here) is:
-- frame-based
-- layered
-- buffered
-- way more controlled
-
-This one is just:
-> immediate rendering prototype
+Advanced is intended to evolve over time while remaining rooted in the Initiality philosophy.
 
 ---
 
-## How it works (simple)
+## Philosophy
 
-1. Generate positions (shape math)
-2. Move cursor to those positions
-3. Print colored spaces
+Most terminal applications operate through text flow:
 
-That’s it.
+```text
+Print
+→
+Scroll
+→
+Repeat
+```
+
+AksChitra approaches the terminal differently:
+
+```text
+State
+→
+Position
+→
+Render
+```
+
+The goal is not to imitate a graphical windowing system.
+
+The goal is to investigate how far terminal rendering can be pushed while remaining simple and understandable.
 
 ---
 
-## Example
+## Design Goals
 
-```cpp
-akschitra_foundation engine;
+* Small core
+* Cross-platform compatibility
+* Direct control over rendering
+* Minimal abstraction
+* Educational value
+* Extensibility
 
-aksf_origin o;
-o.pos = {10, 10};
-o.clr = {RAW_RGB, "", "", 255, 0, 0};
+---
 
-engine.pixel(o);
+## Repository Layout
+
+```text
+AksChitra/
+
+├── Core-Windows/
+├── Core-linux\mac/
+├── Examples\Demos/
+├── Manual_for_use_cases/
+├── LICENSE
+└── README.md
+```
+
+---
+
+## Current Status
+
+The repository currently contains the Initiality core implementations and supporting material.
+
+Advanced development will continue as separate extensions built upon the Initiality concepts.
+
+---
+
+## Vision
+
+AksChitra began as an experiment.
+
+The long-term goal is to build a collection of terminal rendering technologies that remain simple enough to understand, modify, and extend while still being capable of producing complex visual output.
+
+---
+
+## License
+
+GPL-3.0
