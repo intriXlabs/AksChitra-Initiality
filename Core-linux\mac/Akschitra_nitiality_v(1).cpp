@@ -4,7 +4,7 @@
 #include <sys/ioctl.h>
 #include <cmath>
 
-class Terminal_Display {
+class akschitraDisplay {
 public:
 
     void Initialise() {
