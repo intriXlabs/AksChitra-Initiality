@@ -56,7 +56,7 @@ public:
               buffer.size());
     }
 
-    ~Terminal_Display() {
+    ~akschitraDisplay() {
         delete[] display;
     }
 
