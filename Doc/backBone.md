@@ -16,7 +16,7 @@ index = row * stride + col
 
 This computed index is then used to map the input directly to a specific position in the underlying flat 1D array. The corresponding string or character data is written to that location, and the entire buffer is flushed to the terminal in a single batch operation — ensuring efficient and flicker-free rendering.
 
-> *"The terminal is not a GUI, but it is almost a GUI."* — Pawan
+> *"The terminal is not a GUI, but it is almost a GUI."* — IntrixLabs
 
 This abstraction bridges the gap between terminal-based interfaces and graphical applications, offering a lightweight alternative to full-fledged windowing systems.
 
