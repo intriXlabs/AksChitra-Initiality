@@ -35,12 +35,12 @@ public:
         if(!isInitialized)
             return false;
 
-        if (row < 0 || row >= rows || col < 0 || col >= cols) return;
+        if (row < 0 || row >= rows || col < 0 || col >= cols) return false;
         
         // Security: validate hex
-        if (hex_code.length() != 7 || hex_code[0] != '#') return;
+        if (hex_code.length() != 7 || hex_code[0] != '#') return false;
         for (int i = 1; i < 7; i++) {
-            if (!isxdigit(hex_code[i])) return;
+            if (!isxdigit(hex_code[i])) return false;
         }
         
         // Convert hex to ANSI
@@ -60,10 +60,10 @@ public:
         if(!isInitialized)
             return false;
 
-        if (row < 0 || row >= rows || col < 0 || col >= cols) return;
+        if (row < 0 || row >= rows || col < 0 || col >= cols) return false;
         
         // Security: validate RGB values
-        if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) return;
+        if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) return false;
         
         // Convert RGB to ANSI
         std::string ansi = "\033[38;2;" + std::to_string(r) + ";" + 
