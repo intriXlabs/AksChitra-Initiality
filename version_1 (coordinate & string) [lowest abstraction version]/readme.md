@@ -1,4 +1,4 @@
-# Terminal Display
+# akschitra Display
 
 A minimal, zero-dependency terminal buffer renderer using ANSI escape codes.
 
