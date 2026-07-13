@@ -99,12 +99,13 @@ The goal is to investigate how far terminal rendering can be pushed while remain
 ```text
 AksChitra/
 
-├── Core-Windows/
-├── Core-linux\mac/
-├── Examples\Demos/
-├── Manual_for_use_cases/
+├── Docs/
+├── Examples/
+├── include/
+├── legacy/
 ├── LICENSE
-└── README.md
+├── readme.md
+└── useCases_readme.md
 ```
 
 ---
