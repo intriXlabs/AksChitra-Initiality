@@ -1,4 +1,6 @@
 # Read it first
+v3 is in progress - use legacy till then.
+
 website is available for this project: https://akschitra.vercel.app/
 
 edit: website is currently broken due to some reasons but shares a necessary information about creator and project.
