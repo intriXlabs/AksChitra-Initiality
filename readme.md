@@ -294,6 +294,10 @@ direct results: heavy hard rendering
 | **Total Elements/s** | 1,526,193 elem/s | 898,577 elem/s |
 | **Status** | EXCELLENT - Can handle 60+ FPS | EXCELLENT - Can handle 60+ FPS |
 
+### Note
+- Performance may vary based on terminal emulator, system load, and other factors.
+- the exact code which is used for benchmarking is in "tests data/test.cpp" - you can check it out and run it yourself to see the results.
+- no need to say it fake without checking it yourself - coz i have no reason to fake it.
 
 ---
 
