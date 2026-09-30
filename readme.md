@@ -295,6 +295,7 @@ direct results: heavy hard rendering
 | **Status** | EXCELLENT - Can handle 60+ FPS | EXCELLENT - Can handle 60+ FPS |
 
 ### Note
+- the test.cpp does use rand() colors, each and every color is unique and random - so it is not a gimick
 - Performance may vary based on terminal emulator, system load, and other factors.
 - the exact code which is used for benchmarking is in "tests data/test.cpp" - you can check it out and run it yourself to see the results.
 - no need to say it fake without checking it yourself - coz i have no reason to fake it.
